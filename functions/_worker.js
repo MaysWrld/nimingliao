@@ -1,5 +1,6 @@
 // ===========================================
 // 1. Durable Object 类定义 (ChatRoom)
+// 注意：这里必须是 export class，它同时导出了 ChatRoom
 // ===========================================
 export class ChatRoom {
   constructor(state, env) {
@@ -72,5 +73,4 @@ export default {
     }
 };
 
-// 3. 必须导出 ChatRoom 类，以便 Pages 绑定能够识别
-export { ChatRoom };
+// ⚠️ 注意：最后一行多余的 export { ChatRoom } 已经被移除！
