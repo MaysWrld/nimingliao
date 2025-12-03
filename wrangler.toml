@@ -1,0 +1,8 @@
+# ... 其他配置保持不变 ...
+
+# ===============================================
+# KV 命名空间绑定
+# ===============================================
+[[kv_namespaces]]
+binding = "CHAT_KV"
+id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # <-- 替换为您从 CF 仪表板获取的 Namespace ID
