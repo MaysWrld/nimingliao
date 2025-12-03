@@ -1,8 +1,14 @@
-# ... 其他配置保持不变 ...
+# ===============================================
+# 基本配置
+# ===============================================
+name = "cloudflare-mini-chat"
+pages_build_output_dir = "./public"
+compatibility_date = "2024-11-01" 
 
 # ===============================================
-# KV 命名空间绑定
+# Durable Objects 配置 (必须声明 ChatRoom 类)
 # ===============================================
-[[kv_namespaces]]
-binding = "CHAT_KV"
-id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" # <-- 替换为您从 CF 仪表板获取的 Namespace ID
+[[durable_objects.bindings]]
+name = "CHAT_ROOM"
+class_name = "ChatRoom"
+script_name = "cloudflare-mini-chat"
