@@ -4,9 +4,11 @@
 name = "cloudflare-mini-chat"
 pages_build_output_dir = "./public"
 compatibility_date = "2024-11-01" 
+# 明确声明这是一个模块化 Worker，这有助于 Pages 正确解析 DO 绑定
+type = "module" 
 
 # ===============================================
-# Durable Objects 配置 (必须声明 ChatRoom 类)
+# Durable Objects 配置
 # ===============================================
 [[durable_objects.bindings]]
 name = "CHAT_ROOM"
