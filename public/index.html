@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,8 +29,8 @@
         const messageInput = document.getElementById('message-input');
         const sendButton = document.getElementById('send-button');
         
-        // 🚨 关键修改：WebSocket 连接路径对应 functions/index.js 的路由
-        const wsUrl = `wss://${window.location.host}/api/index/websocket`; 
+        // 🚨 关键修改：路由路径改为 /api/websocket (对应 _worker.js 模式)
+        const wsUrl = `wss://${window.location.host}/api/websocket`; 
         let ws;
 
         function appendLog(message) {
